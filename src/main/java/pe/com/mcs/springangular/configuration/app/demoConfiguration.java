@@ -22,13 +22,13 @@ import org.springframework.web.servlet.view.JstlView;
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = "pe.com.mcs.springangular")
-public class demoConfiguration extends WebMvcConfigurerAdapter{
+public class DemoConfiguration extends WebMvcConfigurerAdapter{
     
     @Bean(name="Demo")
     public ViewResolver viewResolver(){
         InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
         viewResolver.setViewClass(JstlView.class);
-        viewResolver.setPrefix("/WEB-INF/views");
+        viewResolver.setPrefix("/WEB-INF/views/");
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }

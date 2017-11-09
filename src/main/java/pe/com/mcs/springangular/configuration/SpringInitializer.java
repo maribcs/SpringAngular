@@ -6,7 +6,7 @@
 package pe.com.mcs.springangular.configuration;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-import pe.com.mcs.springangular.configuration.app.demoConfiguration;
+import pe.com.mcs.springangular.configuration.app.DemoConfiguration;
 
 /**
  *
@@ -15,7 +15,7 @@ import pe.com.mcs.springangular.configuration.app.demoConfiguration;
 public class SpringInitializer extends AbstractAnnotationConfigDispatcherServletInitializer{
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] { demoConfiguration.class };
+        return new Class[] { DemoConfiguration.class };
     }
 
     @Override

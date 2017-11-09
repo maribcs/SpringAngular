@@ -41,3 +41,4 @@ nb-configuration.xml
 ehthumbs.db
 Thumbs.db
 /src/main/webapp/resources/nbproject/private/
+/src/main/webapp/static/lib/*
