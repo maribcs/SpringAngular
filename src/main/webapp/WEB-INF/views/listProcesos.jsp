@@ -6,7 +6,7 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="<c:url value='/static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css' />">        
     </head>
-    <body>
+    <body ng-app="demoApp">
 	<header>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -38,7 +38,7 @@
 		  	</div>
 		</nav>		
 	</header>
-	<section>
+        <section ng-controller="EntregaController">
 		<div class="container">			
 			<section>
 				<div class="list-group">
@@ -63,5 +63,9 @@
 	</footer>
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="<c:url value='/static/lib/bootstrap-3.3.7-dist/js/bootstrap.min.js'/>"></script>
+        <script type="text/javascript" src="<c:url value='/static/lib/angular/angular.min.js'/>"></script>
+        <script type="text/javascript" src="<c:url value='/static/app/app.js'/>"></script>
+        <script type="text/javascript" src="<c:url value='/static/app/core/procesoService.js'/>"></script>
+        <script type="text/javascript" src="<c:url value='/static/app/entrega/entregaController.js'/>"></script>
     </body>
 </html>
