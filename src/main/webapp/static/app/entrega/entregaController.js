@@ -23,5 +23,5 @@
     }
     
     EntregaController.$inject = ['$scope','ProcesoService'];
-});
+})();
 

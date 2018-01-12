@@ -2,11 +2,11 @@
    'use strict';
     angular
         .module('demoApp')
-        .factory('procesoService', ProcesoService);
+        .factory('ProcesoService', ProcesoService);
     
-    function PrcesoService($http, $q){
+    function ProcesoService($http, $q){
         
-        var REST_SERVICE_URI = C_SERVER + '/proceso/';
+        var REST_SERVICE_URI = BASE_URL + '/entrega/proceso';
         
         var factory = {
             listProceso: listProceso,
@@ -30,4 +30,4 @@
     }   
     
     ProcesoService.$inject = ['$http','$q'];
-});
+})();

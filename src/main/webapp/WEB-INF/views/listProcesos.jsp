@@ -4,7 +4,10 @@
 <html>
     <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="<c:url value='/static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css' />">        
+	<link rel="stylesheet" type="text/css" href="<c:url value='/static/lib/bootstrap-3.3.7-dist/css/bootstrap.min.css' />">           
+        <script type="text/javascript">
+            var BASE_URL = '${pageContext.request.contextPath}';
+        </script>
     </head>
     <body ng-app="demoApp">
 	<header>
