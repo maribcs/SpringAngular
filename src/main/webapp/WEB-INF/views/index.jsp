@@ -12,6 +12,6 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1></h1>
+        <h1>INDEX</h1>
     </body>
 </html>

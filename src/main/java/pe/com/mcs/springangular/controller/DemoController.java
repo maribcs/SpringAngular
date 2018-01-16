@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class DemoController {
-    @RequestMapping(value = "/inicio", method = RequestMethod.GET)
+    @RequestMapping(value = "/preelectoral", method = RequestMethod.GET)
     public String index(ModelMap model){
         model.addAttribute("user", "Usuario prueba");
         return "index";
@@ -26,5 +26,11 @@ public class DemoController {
     public String procesos(ModelMap model){
         model.addAttribute("user", "Usuario prueba");
         return "listProcesos";
+    }
+    
+    @RequestMapping(value = "/sec-institucion", method = RequestMethod.GET)
+    public String preelectoralInstitucion(ModelMap model){
+        
+        return "listInstituciones";
     }
 }

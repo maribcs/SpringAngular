@@ -9,7 +9,7 @@
             var BASE_URL = '${pageContext.request.contextPath}';
         </script>
     </head>
-    <body ng-app="demoApp">
+    <body ng-app="venp">
 	<header>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
