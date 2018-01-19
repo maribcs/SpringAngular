@@ -45,57 +45,39 @@
 	<div class="container" ng-controller="InstitucionController as instVm">
 		<h2>INSTITUCIONES</h2>
 		<div>
-			<form class="form-inline">
-				<input type="text" name="search" class="form-control mb-2 mr-sm-2 mb-sm-0">
-				<button type="submit" class="btn btn-primary">Buscar</button>
-				<button type="button" class="btn btn-primary"><span class="icon-plus"></span> Nuevo</button>
-			</form>
+                    <!--<form class="form-inline">
+                            <input type="text" name="search" class="form-control mb-2 mr-sm-2 mb-sm-0">
+                            <button type="submit" class="btn btn-primary">Buscar</button>
+                            <button type="button" class="btn btn-primary"><span class="icon-plus"></span> Nuevo</button>
+                    </form>-->
+                    <a type="button" class="btn btn-primary"><span class="icon-plus"></span> Nuevo</a>
 		</div>
 		<table class="table">
-			<thead class="thead-inverse">
-				<tr>
-					<th>#</th>
-					<th>NOMBRE</th>
-					<th>RUC</th>
-					<th>TEL&Eacute;FONO</th>
-					<th>OPCIONES</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>1</td>
-					<td>COLEGIO DE ESTAD&Iacute;STICOS DEL PER&Uacute;</td>
-					<td>20477878661</td>
-					<td>3456789</td>
-					<th>
-						<a href="" class="option-action option-edit" title="Editar"><span class="icon-pencil"></span></a>
-						<a href="" class="option-action option-remove" title="Eliminar"><span class="icon-bin"></span></a>
-						<a href="" class="option-action option-detail" title="Detalle"><span class="icon-search"></span></a>
-					</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>COLEGIO DE ESTAD&Iacute;STICOS DEL PER&Uacute;</td>
-					<td>20477878661</td>
-					<td>3456789</td>
-					<th>
-						<a href="" class="option-action option-edit" title="Editar"><span class="icon-pencil"></span></a>
-						<a href="" class="option-action option-remove" title="Eliminar"><span class="icon-bin"></span></a>
-						<a href="" class="option-action option-detail" title="Detalle"><span class="icon-search"></span></a>
-					</th>
-				</tr>
-				<tr>
-					<td>1</td>
-					<td>COLEGIO DE ESTAD&Iacute;STICOS DEL PER&Uacute;</td>
-					<td>20477878661</td>
-					<td>3456789</td>
-					<th>
-						<a href="" class="option-action option-edit" title="Editar"><span class="icon-pencil"></span></a>
-						<a href="" class="option-action option-remove" title="Eliminar"><span class="icon-bin"></span></a>
-						<a href="" class="option-action option-detail" title="Detalle"><span class="icon-search"></span></a>
-					</th>
-				</tr>
-			</tbody>
+                    <thead class="thead-inverse">
+                        <tr>
+                            <th>#</th>
+                            <th>NOMBRE</th>
+                            <th>RUC</th>
+                            <th>TEL&Eacute;FONO</th>
+                            <th>OPCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="institucion in instVm.instituciones">
+                            <td>{{$index+1}}</td>
+                            <td>{{institucion.nombre}}</td>
+                            <td>{{institucion.ruc}}</td>
+                            <td>{{institucion.tlfnoPrincipal}}</td>
+                            <td>
+                                    <a href="" class="option-action option-edit" title="Editar"
+                                       ng-click="instVm.goEdit(institucion.id)"><span class="icon-pencil"></span></a>
+                                    <a href="" class="option-action option-remove" title="Eliminar"
+                                       ng-click="instVm.remove(institucion.id)"><span class="icon-bin"></span></a>
+                                    <a href="" class="option-action option-detail" title="Detalle"
+                                       ng-click="instVm.goDetail(institucion.id)"><span class="icon-search"></span></a>
+                            </td>
+                        </tr>
+                    </tbody>
 		</table>
 	</div>
 	<footer>

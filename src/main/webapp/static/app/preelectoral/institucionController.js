@@ -9,7 +9,8 @@
 		function InstitucionController($scope,InstitucionService){
 			var self = this;
 			self.institucion = {id:null,nombre:'',tipo:'',ruc:'',direccion:'',tlfnoPrincipal:'',tlfnoAlterno:'',correo:'',logo:null};
-			
+			self.instituciones = [];
+                        
 			self.fetchAll = fetchAll;
 			self.get = get;
 			self.save = save;
@@ -22,7 +23,7 @@
                             InstitucionService.fetchAll()
                                 .then(
                                     function(data){
-                                        console.log(data);
+                                        self.instituciones = data;
                                     },
                                     function(error){
                                         console.log(error);

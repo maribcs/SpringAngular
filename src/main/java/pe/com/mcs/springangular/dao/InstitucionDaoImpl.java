@@ -28,10 +28,15 @@ public class InstitucionDaoImpl implements InstitucionDao{
         Institucion oInstitucionA = new Institucion();
         oInstitucionA.setId(1L);
         oInstitucionA.setNombre("COLEGIO PROFESIONAL A");
+        oInstitucionA.setRuc("20304050607");
+        oInstitucionA.setTlfnoPrincipal("3456789");
+        
         lstInstitucion.add(oInstitucionA);
         Institucion oInstitucionB = new Institucion();
         oInstitucionB.setId(2L);
         oInstitucionB.setNombre("COLEGIO PROFESIONAL B");
+        oInstitucionB.setRuc("20304050608");
+        oInstitucionB.setTlfnoPrincipal("3456780");
         lstInstitucion.add(oInstitucionB);
         
         return lstInstitucion;
